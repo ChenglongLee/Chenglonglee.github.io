@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="RoboStudio: A Physics Consistent World Model for Robotic Arm with Hybrid Representation">
+  <meta name="keywords" content="#TODO">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta tags for Zotero grab citation -->
+  <meta name="citation_title"
+    content="RoboStudio: A Physics Consistent World Model for Robotic Arm with Hybrid Representation">
+  <meta name="citation_author" content="Lou, Haozhe">
+  <meta name="citation_author" content="Pan, Yike">
+  <meta name="citation_author" content="Liu, Yurong">
+  <meta name="citation_author" content="Zhan, Zitong">
+  <meta name="citation_author" content="Geng, Yiran">
+  <meta name="citation_author" content="Chen, Jianteng">
+  <meta name="citation_author" content="Luo, Liyi">
+  <meta name="citation_author" content="Ma, Wenlong">
+  <meta name="citation_author" content="Li, Chenglong">
+  <meta name="citation_author" content="Wang, Lin">
+  <meta name="citation_author" content="Feng, Hengzhen">
+  <meta name="citation_author" content="Ding, Nanxi">
+  <meta name="citation_author" content="Shi, Lu">
+  <meta name="citation_author" content="Shi, Yongliang">
+  <meta name="citation_publication_date" content="2024/#TODO">
+  <meta name="citation_conference_title" content="#TODO">
+  <meta name="citation_pdf_url" content="https://robostudioapp.com/static/data/">
+  <meta name="citation_abstract" content="">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="">
+  <link rel="author" href="" />
+  <title>RoboStudio: A Physics Consistent World Model for Robotic Arm with Hybrid Representation</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9CHDFCS1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D9CHDFCS1E');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js" defer></script>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RoboStudio: A Physics Consistent World Model for Robotic Arm with
+              Hybrid Representation</h1>
+
+            <h5 class="title is-5 has-text-centererd"></h5>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Haozhe Lou<sup>*1</sup>,</span>
+              <span class="author-block">
+                Yike Pan<sup>*2</sup>,</span>
+              <span class="author-block">
+                Yurong Liu<sup>*3</sup>,
+              </span>
+              <span class="author-block">
+                Zitong Zhan<sup>*4</sup>,
+              </span>
+              <span class="author-block">
+                Yiran Geng<sup>*5</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://jiantengchen.github.io/">Jianteng Chen</a><sup>*6</sup>,
+              </span>
+              <span class="author-block">
+                Liyi Luo<sup>9</sup>,
+              </span>
+              <span class="author-block">
+                Wenlong Ma<sup>7</sup>,
+              </span>
+              <span class="author-block">
+                Chenglong Li<sup>7</sup>,
+              </span>
+              <span class="author-block">
+                Lin Wang<sup>7</sup>,
+              </span>
+              <span class="author-block">
+                Hengzhen Feng<sup>7</sup>,
+              </span>
+              <span class="author-block">
+                Nanxi Ding<sup>7</sup>,
+              </span>
+              <span class="author-block">
+                Lu Shi<sup>10</sup>,
+              </span>
+              <span class="author-block">
+                Yongliang Shi<sup>†8</sup>,
+              </span>
+            </div>
+
+            <br>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Southern California,</span>
+              <span class="author-block"><sup>2</sup>University of Michigan, Ann Arber,</span>
+              <span class="author-block"><sup>3</sup>National University of Singapore,</span>
+              <span class="author-block"><sup>4</sup>University of Bufflo,</span>
+              <span class="author-block"><sup>5</sup>Peking University,</span>
+              <span class="author-block"><sup>6</sup>The Hong Kong University of Science and Technology</span>
+              <span class="author-block"><sup>7</sup>Beijing Institute of Technology,</span>
+              <span class="author-block"><sup>8</sup>Tsinghua University</span>
+              <span class="author-block"><sup>9</sup>McGill University</span>
+              <span class="author-block"><sup>10</sup>AiR, Tsinghua University</span>
+              <span class="author-block"><sup>†</sup>Corresponding author</span>
+              <span class="author-block"><sup>*</sup>Equal contribution</span>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <!-- <a href="https://arxiv.org/pdf/2011.12948" -->
+                  <a href="./static/data/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/RoboOmniSim/Robostudio"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Poster Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Poster</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted controls loop playsinline height="100%">
+          <source src="./static/videos/robostudio_compressed.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Physics-based simulation is crucial for robotic arm control and reinforcement learning, yet bridging the
+          Real2Sim and
+          Sim2Real gaps remains challenging due to the complex properties of robots and manipulated objects. Our
+          work addresses
+          these challenges by introducing a hybrid representation model that integrates mesh geometry, Gaussian
+          color, and physics
+          attributes for improved robotic arm Digital Asset representation. This model facilitates accurate
+          reconstruction of
+          high-fidelity digital assets from monocular videos, supporting both static and dynamic rendering through
+          Gaussian
+          Splatting techniques.
+        </p>
+
+        <p>
+          We propose a novel system that encompasses the entire robotic manipulation process from Real2Sim to
+          Sim2Real. The
+          Real2Sim component reconstructs manipulable textured meshes and labels individual robot parts and objects
+          with their
+          physics attributes. Our method includes real-world motion in digital assets, ensuring accurate
+          representation of mass
+          and friction, crucial for robotic manipulation. This hybrid representation is bound through a
+          Gaussian-Mesh-Pixel
+          binding technique, establishing an isomorphic mapping between mesh vertices and Gaussian models to
+          maintain consistent
+          motion and optimize temporal variations.
+        </p>
+
+        <p>
+          For the Sim2Real transition, our engine rendering the trained policy with high fidelity, applying it to
+          real-world
+          robotic tasks. Our approach includes a comprehensive simulation pipeline that standardizes coordinate
+          systems and
+          scales, ensuring consistent integration of multiple components. Pre-trained policies are tested in the
+          simulation
+          environment and validated through real-world deployment, achieving seamless transfer of grasping policies.
+        </p>
+
+        <p>
+          We provide datasets of robotic manipulation and several benchmarks for mesh reconstruction, as well as 3D
+          and 4D
+          rendering. Our model achieves state-of-the-art results in 4D rendering and mesh reconstruction quality for
+          robotic
+          applications.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Teaser or pipeline fig -->
+  <section>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered" align="center">
+        <img src="./static/images/main.jpg" class="interpolation-image">
+        <br>
+        <br>
+      </div>
+      <p>
+        Our system consists of four modules to achieve the functionalities: The Production and Extraction
+        Backend processes video data to generate accurate and textured 3D models of robotic arms using Gaussian
+        splatting techniques. The Physics Engine Backend integrates with various physics engines to simulate realistic
+        interactions and behaviors of robotic arms. The Splatting Backend enables detailed scenes reconstruction and
+        rendering for both static and dynamic scenarios. The Task Backend facilitates a wide range of robotic tasks
+        such
+        as manipulation and grasping, ensuring consistency across different coordinate systems.
+        The modular nature of the pipeline allows for compatibility with various physics engines and robotic tasks,
+        making it a versatile tool for robotic research and applications.
+      </p>
+    </div>
+    <br>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-novelpose">
+            <video poster="" id="novelpose" autoplay controls muted loop playsinline height=" 100%">
+              <source src="./static/videos/novelpose.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-novelpose_2">
+            <video poster="" id="novelpose_2" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/novelpose_2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-novelpose_4">
+            <video poster="" id="novelpose_4" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/novelpose_4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-novelpose_5">
+            <video poster="" id="novelpose_5" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/novelpose_5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-novelpose_7">
+            <video poster="" id="novelpose_7" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/novelpose_7.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-grasp">
+            <video poster="" id="grasp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/grasp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Results</h2>
+      <!-- <p>
+        any description
+      </p>
+      <br> -->
+      <div class="tabs-widget">
+        <div class="tabs is-centered">
+          <ul class="is-marginless">
+            <li><a>Pushbox</a></li>
+          </ul>
+        </div>
+        <div class="content has-text-centered is-size-7-mobile">
+          Interactive visualization. Hover or tap to move the split.
+        </div>
+        <div class="tabs-content">
+          <div>
+            <div class="tabs-widget">
+              <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
+                <ul class="is-marginless">
+                  <li><a>Original vs. Fixed</a></li>
+                </ul>
+              </div>
+              <div class="tabs-content">
+                <div class="video-comparison" data-label="Original" data-label2="Fixed">
+                  <video class="video" width=100% loop playsinline muted
+                    src="./static/videos/pushbox_compare.mp4"></video>
+                  <canvas></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- here is the code of edting control -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Interpolation</h2>
+          <div class="content has-text-justified">
+            <p>
+              description
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-3 has-text-centered">
+              <img src="./static/images/start.jpg" class="interpolation-image" alt="description" />
+              <p>Start Frame</p>
+            </div>
+            <div class="column interpolation-video-column">
+              <div id="interpolation-image-wrapper">
+                Loading...
+              </div>
+              <input class="slider is-fullwidth is-large is-info" id="interpolation-slider" step="1" min="0" max="84"
+                value="0" type="range">
+            </div>
+            <div class="column is-3 has-text-centered">
+              <img src="./static/images/end.jpg" class="interpolation-image" alt="description" />
+              <p class="is-bold">End Frame</p>
+            </div>
+          </div>
+          <!-- Re-rendering. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{lou2024robo,
+  author    = {Lou, Haozhe and Pan, Yike and Liu, Yurong and Zhan, Zitong and Geng, Yiran and Chen, Jianteng and Luo, Liyi and Ma, Wenlong and Li, Chenglong and Wang, Lin and Shi, Yongliang and Feng, Hengzhen and Ding, Nanxi and Shi, Lu and Zhao, Hao},
+  title     = {RoboStudio: A Physics Consistent World Model for Robotic Arm with Hybrid Representation},
+  journal   = {TODO},
+  year      = {2024},
+}</code></pre>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/data/">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <!-- <a class="icon-link" href="https://github.com/" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a> -->
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Webpage borrowed from <a href="https://open-air-sun.github.io/mars/">MARS</a>, <a
+                href="https://nerf-casting.github.io/">NeRF-Casting</a> and <a
+                href="https://nerfies.github.io">Nerfies</a>. This web
+              page is
+              Zotero-connector
+              friendly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
